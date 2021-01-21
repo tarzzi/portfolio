@@ -1,21 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import bg from './bg.jpg';
-// Import the BrowserRouter, Route and Link components
-import { BrowserRouter, Route, Link } from 'react-router-dom'; 
-import Intro from './Intro.js'; 
-import Projects from './Projects.js'; 
-import Contact from './Contact.js'; 
-import About from './About.js'; 
+import Head from './Head.jsx';
+import Intro from './Intro.jsx'; 
+import Projects from './Projects.jsx'; 
+import Contact from './Contact.jsx'; 
+import About from './About.jsx'; 
+import Scripts from './Scripts.jsx';
+import './fontawesome-all.min.css';
 import './App.css';
+import './webfonts/fa-brands-400.eot';
+import './webfonts/fa-solid-900.eot';
+import './webfonts/fa-regular-400.eot';
  
 function App() {
 	return (
-		<div className="App"> 
-			<Intro />
+		<div className="App">
+		<head>
+			<Head />
+		</head>
+		<Intro />
+		<body className="is-preload">
 			<About />
-			<Projects />
+			<Projects /> 
 			<Contact />
+			<Scripts />
+		</body>
 		</div>
  );
 }
